@@ -1,0 +1,144 @@
+.container {
+	display: grid;
+	grid-template-columns: 100vw;
+	grid-template-rows: 85vh;
+}
+.Remote {
+	display: grid;
+	background-color: #87a7b3;
+	border: 10px;
+	border-style: outset;
+	border-color: black;
+	border-radius: 5px;
+	justify-self: center;
+	align-self: center;
+	height: 500px;
+	width: 250px;
+	grid-template-rows: 170px min-content min-content;
+	grid-template-areas:
+		"display"
+		"firstrow"
+		"main";
+	padding: 5px;
+}
+.display {
+	display: grid;
+	grid-template-areas:
+		"Temp"
+		"icongrid";
+	background-color: aliceblue;
+	grid-area: display;
+}
+.display:active {
+	background-color: aquamarine;
+}
+.temp {
+	color: #34656d;
+}
+.featureIconGrid {
+	display: grid;
+	grid-area: icongrid;
+	grid-template-columns: repeat(7, 1fr);
+	height: 20px;
+}
+.iconitems {
+	justify-self: auto;
+	font-size: x-small;
+}
+.tempval {
+	text-decoration: aqua;
+	text-shadow: black;
+	text-emphasis: inherit;
+	font-size: xx-large;
+}
+.firstRow {
+	margin-top: 5px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 50px;
+	grid-area: firstrow;
+	justify-content: center;
+	grid-gap: 10px;
+}
+.Power {
+	justify-self: space-between;
+	text-align: center;
+	height: 30px;
+	width: auto;
+	background-color: #f4a9a8;
+	border-radius: 10%;
+}
+.Power:active {
+	color: white;
+	background-color: #34656d;
+}
+.Mode {
+	justify-self: space-between;
+	text-align: center;
+	height: 30px;
+	width: auto;
+	border-radius: 10%;
+	background-color: aliceblue;
+}
+
+.main {
+	display: grid;
+	grid-area: main;
+	grid-template-areas:
+		"tempcontrol"
+		"swinghealth"
+		"fanmenu"
+		"turbomenu";
+	grid-template-rows: repeat(4, 50px);
+	grid-template-columns: 100%;
+	grid-gap: 25px;
+}
+.tempcontrol {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-area: tempcontrol;
+	justify-content: center;
+}
+.plus {
+	height: 55px;
+	width: 30px;
+	text-align: center;
+	justify-self: center;
+	border-radius: 10%;
+	background-color: aliceblue;
+}
+.swinghealth {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 5px;
+	grid-area: swinghealth;
+}
+.fanmenu {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 5px;
+	grid-area: fanmenu;
+}
+.turbomenu {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 5px;
+	grid-area: turbomenu;
+}
+.generic {
+	border-style: solid;
+	border-radius: 5%;
+	justify-self: space-between;
+	size: 2rem;
+	text-align: center;
+	height: 40px;
+	width: auto;
+	border-radius: 10%;
+	background-color: aliceblue;
+}
+@media all and (max-width: 699px) {
+	.Remote {
+		height: 80vh;
+		width: 75vw;
+	}
+}
